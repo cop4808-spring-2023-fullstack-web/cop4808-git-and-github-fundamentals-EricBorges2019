@@ -14,6 +14,7 @@ html {
     background-color: azure;
 }
 
+
 #container {
     background-color: black;
     border: 10px solid rgba(47,47,47,1);
@@ -46,6 +47,11 @@ button {
     font-size: 2em;
     font-family: monospace;
     color: black;
+}
+
+newbutton {
+    font-weight: bold;
+    background-color: aqua;
 }
 
 
