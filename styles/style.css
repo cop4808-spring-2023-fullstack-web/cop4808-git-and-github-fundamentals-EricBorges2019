@@ -49,10 +49,18 @@ button {
     color: black;
 }
 
-newbutton {
+.newbutton {
+    font-family: monospace;
     font-weight: bold;
     background-color: aqua;
 }
+
+.newbutton.focus {
+    font-family: monospace;
+    font-weight: bold;
+    background-color: grey;
+}
+
 
 
 #zero {
