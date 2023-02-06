@@ -28,9 +28,13 @@ function clickButton() {
                 inputOperand(buttons[i].value);
                 updateDisplay();
             } else if(buttons[i].classList.contains('operator')) {
-                inputOperator(buttons[i].value);
+                console.log(buttons[i].value);
+                console.log("operator");
+                inputOperator(buttons[i].value);                
             } else if(buttons[i].classList.contains('newbutton')) {
-                inputOperator(buttons[i].value);    
+                console.log(buttons[i].value);
+                console.log("newbutton");
+                inputOperator(buttons[i].value);
             } else if(buttons[i].classList.contains('equals')) {
                 inputEquals();
                 updateDisplay();
@@ -46,7 +50,8 @@ function clickButton() {
             } else if(buttons[i].classList.contains('clear'))
                 clearDisplay();
                 updateDisplay();
-        }
+            }
+    
     )}
 }
 
@@ -149,6 +154,19 @@ function inputSign(num) {
     displayValue = (num * -1).toString();
 }
 
+function calculateSquareRoot(num) {
+    displayValue = Math.sqrt(Number(num)).toString();
+
+}
+
+function returnPi() {
+    displayValue = Math.PI.toString();
+}
+
+function returnE() {
+    displayValue = "2.718281828459045";
+}
+
 function clearDisplay() {
     displayValue = '0';
     firstOperand = null;
@@ -178,7 +196,26 @@ function operate(x, y, op) {
         } else {
         return x / y;
         }
+    } else if(op === '√') {
+        return Math.sqrt(x);
+        console.log("sqrt")
+    } else if(op === '%') {
+        return x % y;
+        console.log("modulo");
+        
+    } else if(op === 'pi') {
+        return Math.PI;
+        console.log("pi");
     }
+
+    else if (op === 'e') {
+
+        return "2.718281828459045";
+        console.log("e");
+    }
+
+
+    
 }
 
 function roundAccurately(num, places) {
