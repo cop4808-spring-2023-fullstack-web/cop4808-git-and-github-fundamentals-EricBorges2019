@@ -55,10 +55,10 @@ button {
     background-color: aqua;
 }
 
-.newbutton.focus {
+.newbutton:active {
     font-family: monospace;
     font-weight: bold;
-    background-color: grey;
+    background-color: white;
 }
 
 
